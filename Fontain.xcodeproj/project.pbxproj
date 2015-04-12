@@ -14,6 +14,7 @@
 		736FD8AB1ADACAB6001F913C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736FD8AA1ADACAB6001F913C /* Images.xcassets */; };
 		736FD8AE1ADACAB6001F913C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736FD8AC1ADACAB6001F913C /* LaunchScreen.xib */; };
 		736FD8BA1ADACAB6001F913C /* FontainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 736FD8B91ADACAB6001F913C /* FontainTests.m */; };
+		736FD8C51ADACBC3001F913C /* NGFunctionalArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 736FD8C41ADACBC3001F913C /* NGFunctionalArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		736FD8B31ADACAB6001F913C /* FontainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FontainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		736FD8B81ADACAB6001F913C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736FD8B91ADACAB6001F913C /* FontainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontainTests.m; sourceTree = "<group>"; };
+		736FD8C31ADACBC3001F913C /* NGFunctionalArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGFunctionalArray.h; path = Functional/NGFunctionalArray.h; sourceTree = "<group>"; };
+		736FD8C41ADACBC3001F913C /* NGFunctionalArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGFunctionalArray.m; path = Functional/NGFunctionalArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				736FD8AA1ADACAB6001F913C /* Images.xcassets */,
 				736FD8AC1ADACAB6001F913C /* LaunchScreen.xib */,
 				736FD89D1ADACAB6001F913C /* Supporting Files */,
+				736FD8C31ADACBC3001F913C /* NGFunctionalArray.h */,
+				736FD8C41ADACBC3001F913C /* NGFunctionalArray.m */,
 			);
 			path = Fontain;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				736FD8A61ADACAB6001F913C /* ViewController.m in Sources */,
+				736FD8C51ADACBC3001F913C /* NGFunctionalArray.m in Sources */,
 				736FD8A31ADACAB6001F913C /* AppDelegate.m in Sources */,
 				736FD8A01ADACAB6001F913C /* main.m in Sources */,
 			);

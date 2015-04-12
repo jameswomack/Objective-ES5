@@ -7,16 +7,24 @@
 //
 
 #import "ViewController.h"
+#import "NGFunctionalArray.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) NSMutableArray *fonts;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+  if (!self.fonts) {    
+    self.fonts = [[UIFont fontNamesForFamilyName:@"Helvetica Neue"]
+     map:^id(NSString *fontName, NSUInteger idx, BOOL *stop) {
+      return [UIFont fontWithName:fontName size:14.f];
+    }];
+  }
+  
+  NSLog(@"%@", self.fonts);
 }
 
 - (void)didReceiveMemoryWarning {
