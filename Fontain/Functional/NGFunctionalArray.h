@@ -72,4 +72,18 @@ typedef NGFunctionalFilterBlock NGFunctionalSomeBlock;
 - (BOOL)some:(NGFunctionalSomeBlock)someBlock;
 
 
+/*
+ This wraps `enumerateObjectsUsingBlock:`
+ */
+- (void)forEach:(void (^)(id, NSUInteger, BOOL *))block;
+
+@end
+
+
+@interface NSMutableArray(NGFunctionalArray)
+- (void)push:(id)firstObject, ... NS_REQUIRES_NIL_TERMINATION;
+- (void)pop;
+- (void)shift;
+- (void)unshift:(id)object;
+- (NSUInteger)lastIndexOf:(id)object;
 @end

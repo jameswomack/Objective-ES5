@@ -18,7 +18,7 @@ typedef BOOL(^NGBooleanTestResult)(id object);
 
 
 
-@interface FontainTests : XCTestCase {
+@interface NGFunctionalArrayTests : XCTestCase {
   NSString *tyrion;
   NSString *sansa;
   NGBooleanTestResult containsLannister;
@@ -30,7 +30,7 @@ typedef BOOL(^NGBooleanTestResult)(id object);
 
 
 
-@implementation FontainTests
+@implementation NGFunctionalArrayTests
 
 
 
@@ -177,6 +177,70 @@ typedef BOOL(^NGBooleanTestResult)(id object);
   
   XCTAssert(lannistersOnly, @"The array did contain a Lannister");
   XCTAssert(iterations == 1, @"As Tyrion was first, only one iteration was needed");
+}
+
+
+- (void)testForEach {
+  __block NSUInteger iterations;
+  
+  [arrayOfThrones forEach:^(NSString *currentObject, NSUInteger idx, BOOL *stop) {
+    iterations++;
+  }];
+  
+  XCTAssert(iterations == arrayOfThrones.count, @"An iteration for each object in the array");
+}
+
+
+- (void)testPush {
+  NSMutableArray *array = @[].mutableCopy;
+  
+  [array push:@"",@"",@"",@"", nil];
+  
+  XCTAssert(array.count == 4, @"Each object gets pushed");
+}
+
+
+- (void)testPop {
+  NSMutableArray *array = @[].mutableCopy;
+  
+  [array push:@"",@"",@"",@"", nil];
+  
+  [array pop];
+  
+  XCTAssert(array.count == 3, @"The last object is removed");
+}
+
+
+- (void)testShift {
+  NSMutableArray *array = @[].mutableCopy;
+  
+  [array push:@"1",@"2",@"3",@"4", nil];
+  
+  [array shift];
+  
+  XCTAssert([array[0] isEqualToString:@"2"], @"The first object is removed");
+}
+
+
+- (void)testUnshift {
+  NSMutableArray *array = @[].mutableCopy;
+  
+  [array push:@"1",@"2",@"3",@"4", nil];
+  
+  [array unshift:@"0"];
+  
+  XCTAssert([array[0] isEqualToString:@"0"], @"A new first object is inserted");
+}
+
+
+- (void)testLastIndexOf {
+  NSMutableArray *array = @[].mutableCopy;
+  
+  [array push:@"2",@"1",@"1",@"2",@"2", nil];
+  
+  NSUInteger lastIndexOf0 = [array lastIndexOf:@"1"];
+  
+  XCTAssert(lastIndexOf0 == 2, @"The last index is the second occurrence");
 }
 
 

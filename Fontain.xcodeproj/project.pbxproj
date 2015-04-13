@@ -13,7 +13,7 @@
 		736FD8A91ADACAB6001F913C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736FD8A71ADACAB6001F913C /* Main.storyboard */; };
 		736FD8AB1ADACAB6001F913C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736FD8AA1ADACAB6001F913C /* Images.xcassets */; };
 		736FD8AE1ADACAB6001F913C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736FD8AC1ADACAB6001F913C /* LaunchScreen.xib */; };
-		736FD8BA1ADACAB6001F913C /* FontainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 736FD8B91ADACAB6001F913C /* FontainTests.m */; };
+		736FD8BA1ADACAB6001F913C /* NGFunctionalArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 736FD8B91ADACAB6001F913C /* NGFunctionalArrayTests.m */; };
 		736FD8C51ADACBC3001F913C /* NGFunctionalArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 736FD8C41ADACBC3001F913C /* NGFunctionalArray.m */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		736FD8AD1ADACAB6001F913C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		736FD8B31ADACAB6001F913C /* FontainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FontainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		736FD8B81ADACAB6001F913C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		736FD8B91ADACAB6001F913C /* FontainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontainTests.m; sourceTree = "<group>"; };
+		736FD8B91ADACAB6001F913C /* NGFunctionalArrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGFunctionalArrayTests.m; sourceTree = "<group>"; };
 		736FD8C31ADACBC3001F913C /* NGFunctionalArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGFunctionalArray.h; path = Functional/NGFunctionalArray.h; sourceTree = "<group>"; };
 		736FD8C41ADACBC3001F913C /* NGFunctionalArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGFunctionalArray.m; path = Functional/NGFunctionalArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +110,7 @@
 		736FD8B61ADACAB6001F913C /* FontainTests */ = {
 			isa = PBXGroup;
 			children = (
-				736FD8B91ADACAB6001F913C /* FontainTests.m */,
+				736FD8B91ADACAB6001F913C /* NGFunctionalArrayTests.m */,
 				736FD8B71ADACAB6001F913C /* Supporting Files */,
 			);
 			path = FontainTests;
@@ -173,6 +173,7 @@
 				TargetAttributes = {
 					736FD8991ADACAB6001F913C = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 5VF9S3SG45;
 					};
 					736FD8B21ADACAB6001F913C = {
 						CreatedOnToolsVersion = 6.3;
@@ -235,7 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				736FD8BA1ADACAB6001F913C /* FontainTests.m in Sources */,
+				736FD8BA1ADACAB6001F913C /* NGFunctionalArrayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,9 +356,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Fontain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -365,9 +369,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Fontain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -424,6 +431,7 @@
 				736FD8BF1ADACAB6001F913C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		736FD8C01ADACAB6001F913C /* Build configuration list for PBXNativeTarget "FontainTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +440,7 @@
 				736FD8C21ADACAB6001F913C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

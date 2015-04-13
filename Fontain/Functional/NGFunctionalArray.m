@@ -11,7 +11,7 @@
 
 
 
-@implementation NSMutableArray(NGFunctionalArray)
+@implementation NSArray(NGFunctionalArray)
 
 
 // typedef id(^NGFunctionalMapBlock)(id currentObject, NSUInteger idx, BOOL *stop);
@@ -87,4 +87,48 @@
 }
 
 
+- (void)forEach:(void (^)(id, NSUInteger, BOOL *))block {
+  [self enumerateObjectsUsingBlock:block];
+}
+
 @end
+
+
+
+@implementation NSMutableArray (NGFunctionalArray)
+
+
+- (void)push:(id)firstObj, ... NS_REQUIRES_NIL_TERMINATION; {
+  va_list args;
+  va_start(args, firstObj);
+  for (id arg = firstObj; arg != nil; arg = va_arg(args, id)){
+    [self addObject:arg];
+  }
+  va_end(args);
+}
+
+
+- (void)pop {
+  [self removeLastObject];
+}
+
+
+- (void)shift {
+  [self removeObjectAtIndex:0];
+}
+
+
+- (void)unshift:(id)object {
+  [self insertObject:object atIndex:0];
+}
+
+
+- (NSUInteger)lastIndexOf:(id)object {
+  return [self indexOfObjectWithOptions:NSEnumerationReverse passingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+    return [obj isEqual:object];
+  }];
+}
+
+
+@end
+
