@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 #import "NGFunctionalArray.h"
+#import "UIFontCharacterExtractor.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic, strong) NSMutableArray *fonts;
 @end
 
@@ -17,19 +19,16 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  if (!self.fonts) {    
-    self.fonts = [[UIFont fontNamesForFamilyName:@"Helvetica Neue"]
-     map:^id(NSString *fontName, NSUInteger idx, BOOL *stop) {
-      return [UIFont fontWithName:fontName size:14.f];
-    }];
-  }
   
-  NSLog(@"%@", self.fonts);
+  NSString *fontName = @"HelveticaNeue-Italic";
+  UIFont *font = [UIFont fontWithName:fontName size:14.f];
+  UIFontCharacterExtractor *extractor = [UIFontCharacterExtractor.alloc initWithFont:font];
+  self.textView.font = font;
+  self.textView.text = [extractor.availableCharacters componentsJoinedByString:@" "];
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
 }
 
 @end

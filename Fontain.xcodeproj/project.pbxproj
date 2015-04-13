@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7311074F1ADB4118009F4047 /* UIFontCharacterExtractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7311074E1ADB4118009F4047 /* UIFontCharacterExtractorTests.m */; };
+		731107521ADB5B25009F4047 /* UIFontCharacterExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 731107511ADB5B25009F4047 /* UIFontCharacterExtractor.m */; };
 		736FD8A01ADACAB6001F913C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 736FD89F1ADACAB6001F913C /* main.m */; };
 		736FD8A31ADACAB6001F913C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 736FD8A21ADACAB6001F913C /* AppDelegate.m */; };
 		736FD8A61ADACAB6001F913C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736FD8A51ADACAB6001F913C /* ViewController.m */; };
@@ -28,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7311074E1ADB4118009F4047 /* UIFontCharacterExtractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFontCharacterExtractorTests.m; sourceTree = "<group>"; };
+		731107501ADB5B25009F4047 /* UIFontCharacterExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIFontCharacterExtractor.h; path = UIFontCharacterExtractor/UIFontCharacterExtractor.h; sourceTree = "<group>"; };
+		731107511ADB5B25009F4047 /* UIFontCharacterExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIFontCharacterExtractor.m; path = UIFontCharacterExtractor/UIFontCharacterExtractor.m; sourceTree = "<group>"; };
 		736FD89A1ADACAB6001F913C /* Fontain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fontain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		736FD89E1ADACAB6001F913C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736FD89F1ADACAB6001F913C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +99,8 @@
 				736FD89D1ADACAB6001F913C /* Supporting Files */,
 				736FD8C31ADACBC3001F913C /* NGFunctionalArray.h */,
 				736FD8C41ADACBC3001F913C /* NGFunctionalArray.m */,
+				731107501ADB5B25009F4047 /* UIFontCharacterExtractor.h */,
+				731107511ADB5B25009F4047 /* UIFontCharacterExtractor.m */,
 			);
 			path = Fontain;
 			sourceTree = "<group>";
@@ -112,6 +119,7 @@
 			children = (
 				736FD8B91ADACAB6001F913C /* NGFunctionalArrayTests.m */,
 				736FD8B71ADACAB6001F913C /* Supporting Files */,
+				7311074E1ADB4118009F4047 /* UIFontCharacterExtractorTests.m */,
 			);
 			path = FontainTests;
 			sourceTree = "<group>";
@@ -225,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				731107521ADB5B25009F4047 /* UIFontCharacterExtractor.m in Sources */,
 				736FD8A61ADACAB6001F913C /* ViewController.m in Sources */,
 				736FD8C51ADACBC3001F913C /* NGFunctionalArray.m in Sources */,
 				736FD8A31ADACAB6001F913C /* AppDelegate.m in Sources */,
@@ -236,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7311074F1ADB4118009F4047 /* UIFontCharacterExtractorTests.m in Sources */,
 				736FD8BA1ADACAB6001F913C /* NGFunctionalArrayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
